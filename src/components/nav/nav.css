@@ -1,0 +1,11 @@
+:root{
+    --color-bg-2: rgb(29, 29, 29);
+}
+.nav{
+    padding: 5px 35px 5px 35px;
+    
+}
+.nav-container{
+    border-radius: 10px;
+    background-color: var(--color-bg-2) ;
+}

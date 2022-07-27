@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+*{
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --color-bg: rgb(15, 54, 5);
+    --color-bg-2: rgb(29, 29, 29);
+    --color-primary: #14af00 ;
+    --color-primary-2: rgba(2,43,13,.5);
+    --color-white: #fff;
+    --color-white-2: rgba(207, 247, 202,.5);
+
+    --container-width-small: 90;
+    --container-width-medium: 80;
+    --container-width-large: 70;
+
+    --transition: all 300ms ease;
+}
+/*this make the page scroll smoothly when selecting the nav*/
+html{
+    scroll-behavior: smooth;
+}
+/*this gets rid of the scroll bar*/
+::-webkit-scrollbar{
+    display: none;
+}
+/*===========images edits==============*/
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.me{
+    max-width: 20%;
+}
+body{
+    font-family: 'Noto Serif', serif;
+    background-color: var(--color-bg);
+    background-image: url(../src/assets/background-image.png);
+    color: var(--color-white);
+    line-height: 2;
+}
+/*=======general style for a gobal level=======*/
+.container{ 
+    width: var(--container-width-large);
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 450;
+}
+
+section{
+    margin-top: 5rem;
+}
+section > h2, section > h5{
+    text-align: center;
+    color: var(--color-white-2);
+}
+section > h2{
+    color: var(--color-primary);
+}
+
+.text-white-2{
+    color:var(--color-white-2);
+}
+
+a{
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+a:hover{
+    color: var(--color-white);
+}
+
+/*=-===btn=====*/
+.btn{
+    margin:5px;
+    width: max-content;
+    display: inline-block;
+    color: var(var(--color-primary));
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-bg)
+}
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+/* body {
+    background: var(--color-bg);
+}
+
+#root{
+    color: aliceblue;
+} */
+
+.column-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.me{
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
 }
